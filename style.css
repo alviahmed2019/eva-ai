@@ -1,0 +1,24 @@
+*{box-sizing:border-box} :root{color-scheme:dark;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif}
+body{margin:0;background:#0b0f16;color:#f3f5f8;min-height:100vh}
+.app{max-width:760px;margin:auto;padding:18px 16px calc(20px + env(safe-area-inset-bottom))}
+header{display:flex;align-items:center;justify-content:space-between;padding:8px 2px 16px}
+.eyebrow{font-size:10px;letter-spacing:2px;color:#9aa7b8;font-weight:700}
+h1{font-size:28px;letter-spacing:2px;margin:3px 0 0}h1 span{color:#8cafff}
+.status{font-size:10px;letter-spacing:1px;color:#b9c6d8;border:1px solid #344052;border-radius:30px;padding:8px 11px}
+.status i{display:inline-block;width:7px;height:7px;border-radius:50%;background:#62d69a;margin-right:5px}
+.stage{position:relative;height:min(58vh,560px);min-height:350px;border:1px solid #283447;border-radius:22px;overflow:hidden;background:radial-gradient(ellipse at 50% 40%,#344052,#171f2d 62%,#10151f)}
+#scene{width:100%;height:100%;display:block;touch-action:pan-y}
+.stage-label{position:absolute;top:15px;left:16px;font-size:10px;letter-spacing:1.4px;color:#b9c6d8}
+.hint{position:absolute;bottom:14px;left:14px;right:14px;text-align:center;font-size:12px;color:#c7d1df;background:#111925b8;padding:10px;border-radius:12px;pointer-events:none}
+.panel{margin-top:16px;background:#141c28;border:1px solid #273449;border-radius:20px;padding:16px}
+label{display:block;color:#c7d1df;font-size:13px;margin-bottom:9px}
+.command-row{display:flex;gap:8px}
+input{min-width:0;flex:1;background:#0d131d;border:1px solid #34445b;border-radius:12px;padding:13px;color:#fff;font-size:14px;outline:none}
+input:focus{border-color:#8cafff}
+button{border:0;border-radius:12px;background:#789cff;color:#08111e;font-weight:700;padding:12px 15px;font-size:13px}
+.actions{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
+.actions button{background:#253248;color:#e8eef8;border:1px solid #394b65}
+.actions button:active{background:#40577b}
+.response{font-size:13px;color:#bdc9d9;min-height:38px;padding:13px 2px 0;line-height:1.5}
+footer{text-align:center;color:#718096;font-size:11px;padding:14px 0}
+@media(min-width:600px){.app{padding-top:28px}.stage{height:520px}.actions{grid-template-columns:repeat(6,1fr)}}

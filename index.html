@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#10151f">
+  <meta name="description" content="EVA AI - interactive 3D character prototype">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css">
+  <title>EVA AI</title>
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div><div class="eyebrow">REAL-TIME VIRTUAL HUMAN</div><h1>EVA <span>AI</span></h1></div>
+      <div class="status"><i></i> 3D DEMO</div>
+    </header>
+    <section class="stage">
+      <canvas id="scene" aria-label="3D character view"></canvas>
+      <div class="stage-label">EVA · CHARACTER PREVIEW</div>
+      <div class="hint" id="hint">Try “wave”, “walk”, “turn” or “sit”</div>
+    </section>
+    <section class="panel">
+      <label for="command">Tell EVA what to do</label>
+      <div class="command-row">
+        <input id="command" type="text" placeholder="e.g. EVA, wave hello" autocomplete="off">
+        <button id="send">Send</button>
+      </div>
+      <div class="actions">
+        <button data-action="idle">Idle</button><button data-action="wave">Wave</button>
+        <button data-action="walk">Walk</button><button data-action="turn">Turn</button>
+        <button data-action="sit">Sit</button><button data-action="stand">Stand</button>
+      </div>
+      <div class="response" id="response" aria-live="polite">Hi! I’m EVA. Choose an action to try the prototype.</div>
+    </section>
+    <footer>Prototype only · No live AI or voice connection yet</footer>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
